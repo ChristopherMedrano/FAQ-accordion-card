@@ -1,0 +1,57 @@
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 12px;
+    background-color: hsl(273, 75%, 66%);
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 12px;
+}
+
+.faq-card {
+    border: solid black 1px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 1em;
+}
+
+.woman-online {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.accordion {
+    border-bottom: solid black 1px;
+}
+
+@media only screen and (max-width: 600px) {
+    .woman-desktop {
+        display: none;
+    }
+
+    .woman-mobile {
+        margin-top: -9em;
+    }
+
+    .woman-online {
+        background-image: url("images/bg-pattern-mobile.svg");
+    }
+
+    .faq-card {
+        border: solid black 1px;
+        margin-top: 10em;
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+
+    .accordion {
+        margin: auto 2em;
+    }
+
+}
