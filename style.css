@@ -10,10 +10,11 @@ h1 {
 
 h2 {
     font-size: 12px;
+    margin: 1.5em auto;
 }
 
 .faq-card {
-    border: solid black 1px;
+    border: solid hsl(273, 75%, 66%) 1px;
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -27,7 +28,11 @@ h2 {
 }
 
 .accordion {
-    border-bottom: solid black 1px;
+    border-bottom: solid hsl(240, 5%, 91%) 1px;
+}
+
+.arrow-toggle{
+    float: right;
 }
 
 @media only screen and (max-width: 600px) {
@@ -37,6 +42,7 @@ h2 {
 
     .woman-mobile {
         margin-top: -9em;
+        margin-left: -2.5em;
     }
 
     .woman-online {
@@ -44,7 +50,6 @@ h2 {
     }
 
     .faq-card {
-        border: solid black 1px;
         margin-top: 10em;
         margin-left: 2em;
         margin-right: 2em;
@@ -52,6 +57,10 @@ h2 {
 
     .accordion {
         margin: auto 2em;
+    }
+
+    .answer{
+        display: none;
     }
 
 }
