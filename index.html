@@ -27,6 +27,7 @@
       color: hsl(228, 45%, 44%);
     }
   </style>
+
 </head>
 
 <body>
@@ -36,7 +37,7 @@
       <img class="woman-mobile" src="images/illustration-woman-online-mobile.svg" alt="woman online"/>
     </div>
     <h1>FAQ</h1>
-    <section class="accordion">
+    <section class="accordion" onclick="toggleFAQ(this)">
       <h2 class="question">
         How many team members can I invite? <span class="arrow-toggle"><img src="images/icon-arrow-down.svg"/></span>
       </h2>
@@ -46,7 +47,7 @@
       </p>
     </section>
 
-    <section class="accordion">
+    <section class="accordion" onclick="toggleFAQ(this)">
       <h2 class="question">
         What is the maximum file upload size? <span class="arrow-toggle"><img src="images/icon-arrow-down.svg"/></span>
       </h2>
@@ -55,8 +56,8 @@
       </p>
     </section>
 
-    <section class="accordion">
-      <h2 class="question">
+    <section class="accordion" onclick="toggleFAQ(this)">
+      <h2 class="question" >
         How do I reset my password? <span class="arrow-toggle"><img src="images/icon-arrow-down.svg"/></span>
       </h2>
       <p class="answer">
@@ -65,7 +66,7 @@
       </p>
     </section>
 
-    <section class="accordion">
+    <section class="accordion" onclick="toggleFAQ(this)">
       <h2 class="question">
         Can I cancel my subscription? <span class="arrow-toggle"><img src="images/icon-arrow-down.svg"/></span>
       </h2>
@@ -96,3 +97,5 @@
 </body>
 
 </html>
+
+<script src = "script.js"></script>
