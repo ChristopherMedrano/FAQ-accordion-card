@@ -1,7 +1,9 @@
 body {
     font-family: 'Kumbh Sans', sans-serif;
     font-size: 12px;
-    background-color: hsl(273, 75%, 66%);
+    color: hsl(238, 29%, 16%);
+    background-image:linear-gradient( hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+    height: 100vh;
 }
 
 h1 {
@@ -11,6 +13,11 @@ h1 {
 h2 {
     font-size: 12px;
     margin: 1.5em auto;
+    font-weight: 400;
+}
+
+p{
+    font-weight: 300;
 }
 
 .faq-card {
@@ -18,8 +25,7 @@ h2 {
     display: flex;
     flex-direction: column;
     background-color: white;
-    border-radius: 1em;
-    margin-bottom: 1em;
+    border-radius: 1.5em;
 }
 
 .woman-online {
@@ -38,7 +44,7 @@ h2 {
 
 @media only screen and (max-width: 600px) {
     .mobile-wrapper{
-        height: 450px;
+        height: 492px;
     }
     
     .woman-desktop {
@@ -46,18 +52,18 @@ h2 {
     }
 
     .woman-mobile {
-        margin-top: -9em;
-        margin-left: -2.5em;
+        margin: -9em 0 3em -2.5em;
     }
 
     .woman-online {
-        background-image: url("images/bg-pattern-mobile.svg");
+        background-image: url("images/bg-pattern-mobile.svg"); 
+        background-repeat: no-repeat;
+        background-position-x: 2.5em;
     }
 
     .faq-card {
-        margin-top: 10em;
-        margin-left: 2em;
-        margin-right: 2em;
+        margin: 10em 1.5em 2em 1.5em;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
     }
 
     .faq-card::after {
@@ -69,6 +75,9 @@ h2 {
         margin: auto 2em;
     }
 
+    h2.active{
+        font-weight: 700;
+    }
     .answer{
         display: none;
     }
