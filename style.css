@@ -19,6 +19,7 @@ h2 {
     flex-direction: column;
     background-color: white;
     border-radius: 1em;
+    margin-bottom: 1em;
 }
 
 .woman-online {
@@ -36,6 +37,10 @@ h2 {
 }
 
 @media only screen and (max-width: 600px) {
+    .mobile-wrapper{
+        height: 450px;
+    }
+    
     .woman-desktop {
         display: none;
     }
@@ -53,6 +58,11 @@ h2 {
         margin-top: 10em;
         margin-left: 2em;
         margin-right: 2em;
+    }
+
+    .faq-card::after {
+        height: 600px;
+        background-color: red;
     }
 
     .accordion {
