@@ -2,7 +2,7 @@ body {
     font-family: 'Kumbh Sans', sans-serif;
     font-size: 12px;
     color: hsl(238, 29%, 16%);
-    background-image:linear-gradient( hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+    background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
     height: 100vh;
 }
 
@@ -16,7 +16,7 @@ h2 {
     font-weight: 400;
 }
 
-p{
+p {
     font-weight: 300;
 }
 
@@ -38,15 +38,25 @@ p{
     border-bottom: solid hsl(240, 5%, 91%) 1px;
 }
 
-.arrow-toggle{
+.arrow-toggle {
     float: right;
+    transition: transform .4s ease-in-out;  
+        -webkit-transition: -webkit-tranform .4 ease-in-out;
+        -ms-transition: -ms-transform .4s ease-in-out;
+   
+}
+
+.spin {
+    transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
 }
 
 @media only screen and (max-width: 600px) {
-    .mobile-wrapper{
+    .mobile-wrapper {
         height: 492px;
     }
-    
+
     .woman-desktop {
         display: none;
     }
@@ -56,7 +66,7 @@ p{
     }
 
     .woman-online {
-        background-image: url("images/bg-pattern-mobile.svg"); 
+        background-image: url("images/bg-pattern-mobile.svg");
         background-repeat: no-repeat;
         background-position-x: 2.5em;
     }
@@ -75,10 +85,11 @@ p{
         margin: auto 2em;
     }
 
-    h2.active{
+    .active {
         font-weight: 700;
     }
-    .answer{
+
+    .hidden {
         display: none;
     }
 
