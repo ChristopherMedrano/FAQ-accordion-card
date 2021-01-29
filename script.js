@@ -36,15 +36,54 @@
 // console.log('second largest: ' + nextLargest);
 
 
+
+
+
 // This function toggles the accordian when FAQ is clicked
-function toggleFAQ(e) {
-    // Gets p.answer of section that is clicked
-    let answer = e.getElementsByClassName('answer')[0];
-    
-    // Toggle logic
-    if (answer.style.display === 'block'){
-        answer.style.display = 'none';
-    } else {
-        answer.style.display = 'block';
-    }
+// function toggleFAQ(e) {
+//     // Gets p.answer of section that is clicked
+//     let answer = e.getElementsByClassName('answer')[0];
+
+//     // Toggle logic
+//     if (answer.style.display === 'block'){
+//         answer.style.display = 'none';
+//     } else {
+//         answer.style.display = 'block';
+//     }
+// }
+
+
+const accordions = document.querySelectorAll('.accordion');
+const accordionAns = document.querySelectorAll('.answer');
+
+console.log(accordions);
+console.log(accordionAns);
+
+// show open by default
+accordionAns[1].classList.remove('hidden');
+
+// hide all answers except for target 
+accordions.forEach(function (accordion) {
+    // target the heading
+    const accordionQues = accordion.firstElementChild;
+
+    // add event listener for toggle
+    accordionQues.addEventListener('click', toggle);
+});
+
+function toggle(e) {
+    accordionAns.forEach(function (content) {
+        // childNode for e.target is 2 = span.arrow-toggle, children 0 = span arrow-toggle
+        const arrows = content.previousElementSibling.firstElementChild;
+        // checks if h2 heading was target
+        if (content.previousElementSibling === e.target){
+            content.classList.remove('hidden');
+            content.previousElementSibling.classList.add('active');
+            arrows.classList.add('spin');
+        } else {
+            content.classList.add('hidden');
+            content.previousElementSibling.classList.remove('active');
+            arrows.classList.remove('spin');
+        }
+    });
 }
