@@ -78,10 +78,12 @@ function toggle(e) {
         // checks if h2 heading was target
         if (content.previousElementSibling === e.target){
             content.classList.remove('hidden');
+            content.classList.add('fade');
             content.previousElementSibling.classList.add('active');
             arrows.classList.add('spin');
         } else {
             content.classList.add('hidden');
+            content.classList.remove('fade');
             content.previousElementSibling.classList.remove('active');
             arrows.classList.remove('spin');
         }
