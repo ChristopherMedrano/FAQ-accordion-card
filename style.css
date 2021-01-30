@@ -26,6 +26,7 @@ p {
     flex-direction: column;
     background-color: white;
     border-radius: 1.5em;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
 }
 
 .woman-online {
@@ -52,7 +53,65 @@ p {
         -webkit-transform: rotate(180deg);
 }
 
-@media only screen and (max-width: 600px) {
+.active {
+    font-weight: 700;
+}
+
+.hidden {
+    display: none;
+}
+
+@media only screen and (min-width: 481px){
+    h2{
+        margin: 1em auto;
+    }
+
+    h2:hover{
+        color: hsl(14, 88%, 65%);
+    }
+
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+    .faq-card {
+        width: 80%;
+        margin: auto;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        overflow: hidden;
+    }
+
+    .woman-mobile {
+        display: none;
+    }
+
+    .woman-desktop{
+        margin-left: -9em;
+        width: 100%;
+        height: auto; 
+    }
+    .mobile-wrapper{
+        display: flex;
+        margin-top: 3em;
+        margin-bottom: 3em;
+    }
+
+    .accordion-wrapper{
+        width: 40%;
+        margin: 1em;
+        float: right;
+        
+    }
+
+    h1{
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 480px) {
     .mobile-wrapper {
         height: 492px;
     }
@@ -73,7 +132,6 @@ p {
 
     .faq-card {
         margin: 10em 1.5em 2em 1.5em;
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
     }
 
     .faq-card::after {
@@ -83,14 +141,6 @@ p {
 
     .accordion {
         margin: auto 2em;
-    }
-
-    .active {
-        font-weight: 700;
-    }
-
-    .hidden {
-        display: none;
     }
 
 }
@@ -108,3 +158,4 @@ p {
     p {
         font-size: .75em;
     }
+}
