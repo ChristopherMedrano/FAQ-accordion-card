@@ -107,9 +107,15 @@ p {
         background-repeat: no-repeat;
         background-attachment: inherit;
         background-size: 700px;
-        /* background-size: 100%; */
         background-position-x: -32em;
         background-position-y: -15em;
+    }
+
+    .faq-card::after {
+        content: url("images/illustration-box-desktop.svg");
+        position: absolute;
+        margin-left: -8em;
+        margin-top: 11em;
     }
 
     .woman-mobile {
@@ -141,6 +147,9 @@ p {
 }
 
 @media only screen and (max-width: 768px) {
+    .box-bg{
+        display: none;
+    }
     .mobile-wrapper {
         height: 492px;
     }
